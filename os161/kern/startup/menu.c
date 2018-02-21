@@ -459,6 +459,11 @@ static const char *testmenu[] = {
 	"[tt1] Thread test 1                 ",
 	"[tt2] Thread test 2                 ",
 	"[tt3] Thread test 3                 ",
+	"[pcl] Print Command Line            ",
+	"[pth] Print Thread Test				 ",
+	"[utt] Unsafe Thread Test				 ",
+	"[ltt] Lock Thread Test					 ",
+	"[stt] Spinlock Thread Test			 ",
 #if OPT_NET
 	"[net] Network test                  ",
 #endif
@@ -565,6 +570,7 @@ static struct {
 	{ "bt",		bitmaptest },
 	{ "km1",	malloctest },
 	{ "km2",	mallocstress },
+	{ "pcl", printCmd },
 #if OPT_NET
 	{ "net",	nettest },
 #endif
@@ -572,7 +578,10 @@ static struct {
 	{ "tt2",	threadtest2 },
 	{ "tt3",	threadtest3 },
 	{ "sy1",	semtest },
-
+	{ "pth", digitThreadTest },
+	{ "utt", unsafeThreadTest },
+	{ "ltt", lockedThreadTest },
+   { "stt", spinLockThreadTest },
 	/* synchronization assignment tests */
 	{ "sy2",	locktest },
 	{ "sy3",	cvtest },

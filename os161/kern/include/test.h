@@ -58,7 +58,13 @@ int threadtest2(int, char **);
 int threadtest3(int, char **);
 int semtest(int, char **);
 int locktest(int, char **);
+int unsafeThreadTest(int, char **);
+int lockedThreadTest(int, char **);
+int spinLockThreadTest(int, char **);
 int cvtest(int, char **);
+
+/* The best thread tests */
+int digitThreadTest(int, char **);
 
 #ifdef UW
 /* Another thread and synchronization test */
@@ -89,5 +95,6 @@ void menu(char *argstr);
 /* The main function, called from start.S. */
 void kmain(char *bootstring);
 
-
+/* My test function for calling the command line. */
+int  printCmd(int, char **);
 #endif /* _TEST_H_ */
